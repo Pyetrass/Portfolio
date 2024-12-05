@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Lya</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #3b0a6d;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #3b0a6d /* Cor de fundo do corpo */
+            color: #c0c0c0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Times New Roman', serif;
+            color: #c0c0c0;
+        }
+
+        header {
+            background-color: #3b0a6d; /* Cor de fundo do header */
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #c0c0c0;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 2rem;
+            margin: 2rem;
+            background-color: #3b0a6d; /* Cor de fundo das seções */ 
+            color: #c0c0c0;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        section:hover {
+            background-color: #502d80;
+        }
+
+        .img-perfil {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            max-width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .img-perfil:hover {
+            transform: scale(1.05);
+        }
+
+        .habilidade {
+            margin: 1rem 0;
+        }
+
+        .habilidade-bar {
+            background-color: #3b0a6d;
+            border-radius: 5px;
+            height: 10px;
+        }
+
+        .habilidade-progress {
+            background-color: #c0c0c0;
+            height: 10px;
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+
+        .habilidade:hover .habilidade-progress {
+            background-color: #3b0a6d;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            color: #c0c0c0;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #c0c0c0;
+            background-color: #502d80;
+            transition: background-color 0.3s ease;
+        }
+
+        footer:hover {
+            background-color: #c0c0c0;
+        }
+
+        .carousel-inner {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgb(74, 52, 201);
+        }
+
+        .carousel-item img {
+            border-radius: 8px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #007bff;
+        }
+
+        #projetos {
+            background-color: #502d80;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <div>
+                <img src="imagens\perfil.jpg" alt="Foto de Perfil" class="img-perfil">
+                <p>
+                    Meu nome é Lya Pyetra, tenho 16 anos e estou cursando técnico em informática. Sou apaixonada por tecnologia e criatividade, explorando formas de unir arte e inovação.
+                </p>
+            </div>
+        </section>
+        <section id="projetos" class="container py-5">
+            <h2 class="text-center mb-4">Meus Projetos</h2>
+            <div id="carouselProjetos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="projetos/site da etec/etec.jpg" class="d-block w-100" alt="Projeto 1">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Projeto Site ETEC</h5>
+                                <p>Descrição breve do projeto 1. Uma explicação do que foi feito e quais tecnologias foram utilizadas.</p>
+                                <a href="projetos\site da etec\pagina1.html" class="btn btn-primary">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="projetos/lanchonete/lanchonete.png" class="d-block w-100" alt="Projeto 2">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Projeto Lanchonete</h5>
+                                <p>Descrição breve do projeto 2. O que foi realizado, tecnologias utilizadas, etc.</p>
+                                <a href="projetos\lanchonete\menu_lanchonete.html" class="btn btn-primary">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjetos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProjetos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="habilidade">
+                <h3>HTML</h3>
+                <div class="habilidade-bar"><div class="habilidade-progress" style="width: 80%;"></div></div>
+                <span>80%</span>
+            </div>
+            <div class="habilidade">
+                <h3>CSS</h3>
+                <div class="habilidade-bar"><div class="habilidade-progress" style="width: 35%;"></div></div>
+                <span>35%</span>
+            </div>
+            <div class="habilidade">
+                <h3>JavaScript</h3>
+                <div class="habilidade-bar"><div class="habilidade-progress" style="width: 40%;"></div></div>
+                <span>40%</span>
+            </div>
+            <div class="habilidade">
+                <h3>Canva</h3>
+                <div class="habilidade-bar"><div class="habilidade-progress" style="width: 70%;"></div></div>
+                <span>70%</span>
+            </div>
+        </section>
+    
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Email: <a href="mailto:lyaps.santos@gmail.com">lyaps.santos@gmail.com</a></p>
+            <p>Telefone: +55 13 98230-6675</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/pyetrass_?igsh=M2VqZTBiZ3Qwazhq" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lya Pyetra</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    

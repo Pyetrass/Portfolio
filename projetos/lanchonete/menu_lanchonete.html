@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        var m, l, cntXT=0, XT=0, cntXE=0, XE=0, cntXS=0, XS=0, contb=0, b=0, b, cntCoca=0, Coca=0, cntGua=0, Gua=0, cntFant=0, Fant=0, cntTub=0, Tub=0, tt
+        
+        
+        do
+        {
+        m=parseInt(prompt("Menu\n\nDigite a sua opção:\n\n1-Lanches\n2-Bebidas\n3-Conta\n0-Sair"))
+        switch (m) 
+        {
+            case 1: 
+            do
+            {
+            l=parseInt(prompt("lanches\nDigite a sua opção:\n\n1-X-tudo R$10,00\n2-X-egg R$9,00\n3-X-salada R$8,00\n4-BauruR$5,00\n0-Voltar"))
+            switch (l) 
+            {
+                case 1:
+                    cntXT++
+                    XT=XT+10
+                    break;
+                case 2:
+                    cntXE++
+                    XE=XE+9
+                    break;
+                case 3: 
+                    cntXS++
+                    XS=XS+8
+                    break;
+                case 4:
+                    contb++
+                    b=b+5
+                    break;
+                case 0:
+                    break
+            }
+            } while (l!=0)
+            break;
+
+            case 2:
+            do
+            {
+             b=parseInt(prompt("Bebidas\n\n1-Coca-cola R$5,00\n2-Guaraná R$4,00\n3-Fantas R$4,00\n4-Tubaína R$3,00\n0-Voltar"))
+                switch (b)
+                {
+                    case 1:
+                        cntCoca++
+                        Coca=Coca+5
+                    break;
+                    case 2:
+                        cntGua++
+                        Gua=Gua+4
+                        break;
+                    case 3: 
+                        cntFant++
+                        Fant=Fant+4
+                    break;
+                    case 4: 
+                        cntTub++
+                        Tub=Tub+3
+                        break;
+                    case 0: 
+                        break;
+                }
+            } while (b!=0)
+            break;
+
+            case 3: 
+            tt=XT+XE+XS+b+Coca+Gua+Fant+Tub
+            alert("Conta\n\nX-tudo "+cntXT+" R$"+XT+",00\nX-egg "+cntXE+" R$"+XE+",00\nX-salada "+cntXS+" R$"+XS+",00\nBauru "+contb+" R$"+b+",00\n\nCoca-cola "+cntCoca+" R$"+Coca+",00\nGuaraná "+cntGua+" R$"+Gua+",00\nFanta "+cntFant+" R$"+Fant+",00\nTubaína "+cntTub+" R$"+Tub+",00\n\nTOTAL: "+tt+",00")
+            break;
+
+            case 0:
+                break;
+        } 
+    }while (m!=0)
+        
+    </script>
+</html>
